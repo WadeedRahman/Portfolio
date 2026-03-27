@@ -1,13 +1,161 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ================= NAVBAR ================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* 🔥 FIX: keeps navbar above everything */
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 50px;
+  background: #f7f7f7;
+}
+
+.hero-text {
+  max-width: 500px;
+  margin-left: 100px;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: #666;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.description {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= IMAGE ================= */
+.hero-image {
+  position: relative;
+  margin-right: 150px;
+}
+
+.image-frame {
+  padding: 10px;
+}
+
+.image-frame img {
+  width: 300px;
+  display: block;
+  margin: 40px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-left: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .nav {
+    display: none;
+  }
+}
+
+/* ================= FORM OVERLAY ================= */
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= FORM BOX ================= */
+.form-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 350px;
+  position: relative;
+  text-align: center;
+}
+
+/* ================= INPUTS ================= */
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* ================= LABELS ================= */
+.form-container label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ================= LINKEDIN ================= */
+.linkedin-icon {
+  display: inline-block;
+  margin-top: 15px;
+  color: #0077b5;
+}
+
+/* ================= CLOSE BUTTON ================= */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
 }
