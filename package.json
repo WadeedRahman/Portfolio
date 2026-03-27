@@ -19,7 +19,7 @@
     "react-tsparticles": "^2.12.2",
     "tsparticles": "^3.9.1",
     "web-vitals": "^2.1.4",
-    "homepage": "https://WadeedRahman.github.io/Portfolio"
+    "homepage": "https://wadeedRahman.github.io/Portfolio"
   },
   "scripts": {
     "start": "react-scripts start",
