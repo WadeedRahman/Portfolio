@@ -176,7 +176,7 @@ const Hero = () => {
           </div>
           <div className="col-md-6">
             <div className="edu-card">
-              <span className="edu-date">2019 - 2021</span>
+              <span className="edu-date">2018 - 2020</span>
               <h4>Intermediate in Computer Science</h4>
               <p className="text-crimson">Aspire College Jhelum</p>
             </div>

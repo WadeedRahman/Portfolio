@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
-export default function AboutPage() {
+export default function AboutSection() {
   return (
     <div>
       {/* HEADER */}
@@ -19,7 +19,7 @@ export default function AboutPage() {
           <div className="col-md-5 text-center mb-5 mb-md-0">
             <div className="image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+                src="wadeed1.png"
                 alt="profile"
                 className="img-fluid profile-img"
               />
@@ -29,22 +29,32 @@ export default function AboutPage() {
           <div className="col-md-7">
             <div className="row">
               <div className="col-md-6 mb-4 mb-md-0">
-                <h3>Designing With Passion While Exploring The World</h3>
+                <h3>Building With Purpose</h3>
                 <div className="small-underline"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>I focus on creating web applications that are fast, scalable, and easy to use. 
+        Every project I work on is built with performance and real-world usability in mind.</p>  
+         <p>
+        From frontend design to backend logic, I aim to keep things clean, efficient, 
+        and aligned with modern development standards.
+      </p>
               </div>
 
               <div className="col-md-6">
-                <h3>I Create Products Not Just Arts</h3>
+                <h3>More Than Just Development</h3>
                 <div className="small-underline"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                 <p>
+        I don’t just build websites—I handle the full process from development to deployment 
+        using DevOps practices to ensure smooth and reliable delivery.
+      </p>
+      <p>
+        I also work with WordPress and Shopify for eCommerce solutions, and use Amazon PPC 
+        to help products reach the right audience and grow effectively.
+      </p>
               </div>
             </div>
 
-            <p className="mt-5 mb-1">Let's talk with me.</p>
-            <h4 className="email">contact@domain.com</h4>
+            <p className="mt-5 mb-1">Let’s work together.</p>
+            <h4 className="email">wadeed125@gmail.com.com</h4>
           </div>
         </div>
       </section>
@@ -53,18 +63,24 @@ export default function AboutPage() {
       <section className="about-extended container pb-5 mb-5">
         <div className="row align-items-center">
           <div className="col-md-6 mb-4 mb-md-0">
-            <h2 className="section-title">Frontend and Backend Developer</h2>
+            <h2 className="section-title">Full Stack & DevOps Expertise</h2>
             <div className="underline left"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>
+        I work across both frontend and backend, building responsive interfaces 
+        with React and developing scalable server-side solutions using Node.js.
+      </p>
+      <p>
+        Along with development, I handle deployment, optimization, and maintenance 
+        using modern DevOps practices to ensure reliable and efficient applications.
+      </p>
             <button className="btn btn-danger download-btn">Download CV</button>
           </div>
 
           <div className="col-md-6">
-            <Skill name="JavaScript" width="85%" />
-            <Skill name="HTML" width="80%" />
-            <Skill name="CSS" width="90%" />
-            <Skill name="Photoshop" width="95%" />
+            <Skill name="Development" width="95%" />
+            <Skill name="Deployment" width="95%" />
+            <Skill name="Wordpress" width="90%" />
+            <Skill name="Amazon" width="85%" />
           </div>
         </div>
       </section>
@@ -78,7 +94,7 @@ export default function AboutPage() {
 
           <div className="row mt-5">
             <TestimonialCard 
-              name="John Doe" 
+              name="rohit_go" 
               img="https://randomuser.me/api/portraits/men/1.jpg" 
             />
             <TestimonialCard 
