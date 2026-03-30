@@ -86,139 +86,143 @@ export default Hero;*/
 
 
 import React, { useEffect, useState } from "react";
-// ... (keep your other imports)
+import "../index.css";
+import { fireConfetti } from "../Confetti";
 
 const Hero = () => {
   const [showForm, setShowForm] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // Handle Form Submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-    // After 3 seconds, close the form and reset
-    setTimeout(() => {
-      setShowForm(false);
-      setIsSubmitted(false);
-    }, 3000);
-  };
+  useEffect(() => {
+    fireConfetti();
+  }, []);
 
   return (
     <div className="portfolio-main">
-      {/* ... (keep Hero, About, and Education sections) */}
-
-      {/* --- MODERN CONTACT MODAL --- */}
-      {showForm && (
-        <div className="form-overlay" onClick={() => setShowForm(false)}>
-          <div className="form-container-glass" onClick={(e) => e.stopPropagation()}>
-            <button className="close-x" onClick={() => setShowForm(false)}>×</button>
-            
-            {!isSubmitted ? (
-              <>
-                <div className="form-header">
-                  <h2>Let's <span className="text-gradient">Connect</span></h2>
-                  <p>Have an idea? Let's turn it into reality.</p>
-                </div>
-
-                <form onSubmit={handleSubmit} className="modern-form">
-                  <div className="input-group-modern">
-                    <input type="text" id="name" required placeholder=" " />
-                    <label htmlFor="name">Full Name</label>
-                  </div>
-
-                  <div className="input-group-modern">
-                    <input type="email" id="email" required placeholder=" " />
-                    <label htmlFor="email">Email Address</label>
-                  </div>
-
-                  <div className="input-group-modern">
-                    <textarea id="message" required placeholder=" " rows="4"></textarea>
-                    <label htmlFor="message">Tell me about your project...</label>
-                  </div>
-
-                  <button type="submit" className="btn-send">
-                    <span>Send Message</span>
-                    <i className="bi bi-send-fill ms-2"></i>
-                  </button>
-                </form>
-              </>
-            ) : (
-              <div className="success-state text-center">
-                <div className="success-icon">
-                  <i className="bi bi-check-circle-fill"></i>
-                </div>
-                <h3>Message Sent!</h3>
-                <p>Thanks for reaching out, Wadeed will get back to you shortly.</p>
-              </div>
-            )}
+      {/* --- HERO SECTION --- */}
+      <section className="hero-modern">
+        <div className="container d-flex align-items-center flex-column flex-lg-row">
+          <div className="hero-text-block">
+            <div className="badge-modern mb-3">
+              <span className="dot"></span> OPEN FOR COLLABORATION
+            </div>
+            <h1 className="hero-title">
+              Innovating the <span className="text-gradient">Digital</span> <br />
+              Landscape.
+            </h1>
+            <p className="hero-description">
+              I’m <strong>Wadeed Ur Rahman</strong>. I bridge the gap between 
+              complex backend logic and pixel-perfect frontend experiences.
+            </p>
+            <button className="btn-main" onClick={() => setShowForm(true)}>
+              Get In Touch
+            </button>
+          </div>
+          <div className="hero-visual">
+            <div className="glass-frame">
+              <img src="you.png" alt="Wadeed" className="hero-img" />
+              <div className="floating-card card-1">Full-Stack</div>
+              <div className="floating-card card-2">React 19</div>
+            </div>
           </div>
         </div>
-      )}
+      </section>
 
+      {/* --- ABOUT ME SECTION --- */}
+      <section className="about-section container">
+        <div className="row align-items-center">
+          <div className="col-lg-6 mb-5 mb-lg-0">
+            <div className="about-visual">
+                <div className="experience-box">
+                    <h3>2+</h3>
+                    <p>Years of <br/> Crafting Code</p>
+                </div>
+                <div className="blob-bg"></div>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            <h6 className="section-subtitle">WHO AM I?</h6>
+            <h2 className="section-title">A Developer with a Passion for <span className="text-gradient">Problem Solving</span></h2>
+            <p className="about-text">
+              My journey started with a curiosity for how things work under the hood. 
+              Today, I specialize in building scalable web applications using the 
+              MERN stack and modern UI frameworks. I don't just write code; 
+              I build solutions that help businesses grow.
+            </p>
+            <div className="skill-tags">
+              <span>Clean Code</span>
+              <span>User Centric</span>
+              <span>Fast Learner</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- EDUCATION SECTION --- */}
+      <section className="education-section py-5">
+        <div className="container">
+          <div className="text-center mb-5">
+            <h6 className="section-subtitle">MY JOURNEY</h6>
+            <h2 className="section-title text-white">Academic <span className="text-gradient">Background</span></h2>
+          </div>
+          <div className="education-grid">
+            {/* Degree 1 */}
+            <div className="edu-card">
+              <div className="edu-icon"><i className="bi bi-mortarboard-fill"></i></div>
+              <div className="edu-content">
+                <span className="edu-date">2021 — 2025</span>
+                <h4>Bachelor of Computer Science</h4>
+                <p className="edu-org">Your University Name</p>
+                <p className="edu-desc">Focused on Software Engineering, Data Structures, and Web Technologies.</p>
+              </div>
+            </div>
+            {/* Degree 2 */}
+            <div className="edu-card">
+              <div className="edu-icon"><i className="bi bi-patch-check-fill"></i></div>
+              <div className="edu-content">
+                <span className="edu-date">2019 — 2021</span>
+                <h4>Intermediate in Computer Science</h4>
+                <p className="edu-org">Your College Name</p>
+                <p className="edu-desc">Foundation in Programming Fundamentals and Mathematics.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Styles */}
       <style>{`
-        /* Form Overlay */
-        .form-overlay {
-          position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-          background: rgba(11, 19, 43, 0.85); backdrop-filter: blur(8px);
-          display: flex; align-items: center; justify-content: center; z-index: 9999;
-          animation: fadeIn 0.3s ease;
-        }
+        .portfolio-main { background: #0b132b; color: white; }
+        .section-subtitle { color: #e63946; font-weight: 700; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 10px; display: block; }
+        .section-title { font-size: 2.8rem; font-weight: 800; margin-bottom: 25px; color: white; }
+        .text-gradient { background: linear-gradient(90deg, #e63946, #fca311); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-        /* Glass Container */
-        .form-container-glass {
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          padding: 50px; border-radius: 30px; width: 100%; max-width: 500px;
-          position: relative; box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-        }
+        /* About Styles */
+        .about-section { padding: 100px 0; }
+        .about-text { color: #a0aec0; line-height: 1.8; font-size: 1.1rem; }
+        .skill-tags { display: flex; gap: 15px; margin-top: 30px; }
+        .skill-tags span { background: rgba(230, 57, 70, 0.1); color: #e63946; padding: 8px 20px; border-radius: 50px; font-weight: 600; border: 1px solid rgba(230, 57, 70, 0.2); }
+        .about-visual { position: relative; }
+        .experience-box { position: absolute; bottom: 20px; right: 20px; background: white; color: #0b132b; padding: 25px; border-radius: 20px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.3); z-index: 2; }
+        .experience-box h3 { font-size: 2.5rem; font-weight: 900; margin-bottom: 0; color: #e63946; }
+        .blob-bg { width: 350px; height: 350px; background: linear-gradient(45deg, #e63946, #0b132b); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; animation: blob 8s infinite alternate; filter: blur(40px); opacity: 0.4; }
 
-        .close-x {
-          position: absolute; top: 20px; right: 25px; background: none;
-          border: none; color: white; font-size: 2rem; cursor: pointer; opacity: 0.5;
-        }
-        .close-x:hover { opacity: 1; color: #e63946; }
+        /* Education Styles */
+        .education-grid { display: grid; gap: 30px; max-width: 800px; margin: 0 auto; }
+        .edu-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 25px; display: flex; gap: 25px; transition: 0.3s; }
+        .edu-card:hover { background: rgba(255, 255, 255, 0.06); transform: translateX(10px); border-color: #e63946; }
+        .edu-icon { font-size: 2rem; color: #e63946; }
+        .edu-date { color: #fca311; font-weight: 700; font-size: 0.9rem; }
+        .edu-content h4 { margin: 10px 0 5px; font-weight: 700; }
+        .edu-org { font-weight: 600; color: #a0aec0; margin-bottom: 10px; }
+        .edu-desc { color: #718096; font-size: 0.95rem; }
 
-        .form-header h2 { font-weight: 800; margin-bottom: 10px; }
-        .form-header p { color: #a0aec0; margin-bottom: 30px; }
-
-        /* Modern Input Styling (Floating Labels) */
-        .input-group-modern { position: relative; margin-bottom: 30px; }
+        @keyframes blob { from { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; } to { border-radius: 50% 50% 20% 80% / 20% 50% 50% 80%; } }
         
-        .input-group-modern input, 
-        .input-group-modern textarea {
-          width: 100%; padding: 15px; background: rgba(255,255,255,0.03);
-          border: 1px solid rgba(255,255,255,0.1); border-radius: 12px;
-          color: white; outline: none; transition: 0.3s;
-        }
-
-        .input-group-modern label {
-          position: absolute; left: 15px; top: 15px; color: #718096;
-          pointer-events: none; transition: 0.3s;
-        }
-
-        /* Logic for floating labels */
-        .input-group-modern input:focus ~ label,
-        .input-group-modern input:not(:placeholder-shown) ~ label,
-        .input-group-modern textarea:focus ~ label,
-        .input-group-modern textarea:not(:placeholder-shown) ~ label {
-          top: -25px; left: 5px; font-size: 0.85rem; color: #e63946; font-weight: 600;
-        }
-
-        .input-group-modern input:focus, 
-        .input-group-modern textarea:focus { border-color: #e63946; background: rgba(255,255,255,0.06); }
-
-        .btn-send {
-          width: 100%; padding: 15px; background: #e63946; color: white;
-          border: none; border-radius: 12px; font-weight: 700; transition: 0.3s;
-        }
-        .btn-send:hover { background: #c12a36; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(230, 57, 70, 0.3); }
-
-        /* Success State Animation */
-        .success-icon { font-size: 4rem; color: #4ade80; margin-bottom: 20px; animation: scaleUp 0.4s ease; }
-        
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes scaleUp { from { transform: scale(0); } to { transform: scale(1); } }
+        /* Mobile adjustment */
+        @media (max-width: 768px) { .edu-card { flex-direction: column; text-align: center; } .section-title { font-size: 2.2rem; } }
       `}</style>
+
+      {/* Your Contact Form Popup Logic here... */}
     </div>
   );
 };
