@@ -3,9 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-18-image-lightbox/style.css"; // --- IMPORTANT: Import Lightbox CSS ---
 import Lightbox from "react-18-image-lightbox"; // --- IMPORTANT: Import Lightbox Component ---
 import { ExternalLink, Download, Award, Briefcase, ChevronRight, Eye } from "lucide-react";
-import Footer from "./components/Footer";
+import Footer from "./Footer";
 
-export default function ModernPortfolio() {
+export default function Portfolio() {
   const [filter, setFilter] = useState("all");
 
   // --- LIGHTBOX STATE ---
