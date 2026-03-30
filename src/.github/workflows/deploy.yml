@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger on push to main branch
+      - main
 
 permissions:
   contents: write
@@ -16,13 +16,19 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - name: Install and Build 🔧
-        run: |
-          npm install
-          npm run build
+      - name: Setup Node ⚙️
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Install Dependencies 📦
+        run: npm install
+
+      - name: Build Project 🏗️
+        run: npm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build # The folder the action should deploy.
-          branch: gh-pages # The branch the action should deploy to.
+          branch: gh-pages
+          folder: build
