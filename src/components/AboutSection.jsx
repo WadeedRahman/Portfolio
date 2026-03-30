@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Footer from "./components/Footer";
+import Footer from "./Footer";
 
 export default function AboutPage() {
   return (

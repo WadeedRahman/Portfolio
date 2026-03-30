@@ -43,7 +43,7 @@ import React, { useEffect, useState } from "react";
 import "../index.css";
 import { fireConfetti } from "../Confetti";
 import { FaLinkedin } from "react-icons/fa";
-import Footer from "./components/Footer";
+import Footer from "./Footer";
 const Hero = () => {
   const [showForm, setShowForm] = useState(false);
 

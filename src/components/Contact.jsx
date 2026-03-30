@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import Footer from "./components/Footer";
+import Footer from "./Footer";
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
