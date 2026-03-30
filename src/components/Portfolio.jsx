@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-18-image-lightbox/style.css"; 
 import Lightbox from "react-18-image-lightbox"; 
-import { Download, Award, Briefcase, ChevronRight, Eye, Github, Linkedin, Twitter, Mail, ArrowUp, Heart } from "lucide-react";
+import { Download, Award, Briefcase, ChevronRight, Eye, GitHub, Linkedin, Twitter, Mail, ArrowUp, Heart } from "lucide-react";
 
 export default function Portfolio() {
   const [filter, setFilter] = useState("all");
@@ -153,7 +153,7 @@ function FooterComponent() {
         <h3 className="footer-logo text-gradient">Wadeed.</h3>
         <p className="text-light-muted mb-4">Building high-performance web applications.</p>
         <div className="mb-4">
-          <a href="https://github.com/WadeedRahman" className="social-icon"><Github size={18} /></a>
+          <a href="https://github.com/WadeedRahman" className="social-icon"><GitHub size={20} /></a>
           <a href="#" className="social-icon"><Linkedin size={18} /></a>
           <a href="#" className="social-icon"><Mail size={18} /></a>
         </div>

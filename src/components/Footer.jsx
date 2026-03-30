@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Github, Linkedin, Twitter, Mail, ArrowUp, Heart } from "lucide-react";
+import { GitHub, Linkedin, Twitter, Mail, ArrowUp, Heart } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -26,7 +26,7 @@ export default function Footer() {
               Let's turn your vision into a digital reality.
             </p>
             <div className="social-links d-flex gap-3 mt-4">
-              <a href="https://github.com/WadeedRahman" target="_blank" className="social-icon"><Github size={20} /></a>
+              <a href="https://github.com/WadeedRahman" target="_blank" className="social-icon"><GitHub size={20} /></a>
               <a href="#" className="social-icon"><Linkedin size={20} /></a>
               <a href="#" className="social-icon"><Twitter size={20} /></a>
             </div>
