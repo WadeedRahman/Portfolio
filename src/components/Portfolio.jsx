@@ -146,7 +146,7 @@ export default function ModernPortfolio() {
               </div>
             </div>
           </div>
-          <Footer />
+          
         </div>
       </section>
 
@@ -162,8 +162,9 @@ export default function ModernPortfolio() {
           imageTitle={certifications[currentCertIndex].name}
           imageCaption={`${certifications[currentCertIndex].issuer} | ${certifications[currentCertIndex].date}`}
         />
+        
       )}
-
+<Footer />
       {/* --- STYLES (Updated for Lightbox functionality) --- */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap');
