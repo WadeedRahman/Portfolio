@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Footer from "./components/Footer";
 export default function Services() {
   const services = [
     {
@@ -78,6 +78,7 @@ export default function Services() {
             <p>Let's build something amazing together. Reach out for a free consultation.</p>
             <button className="btn btn-danger cta-btn">Get Started Now</button>
           </div>
+          <Footer />
         </div>
       </section>
 

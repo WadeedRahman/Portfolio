@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "./components/Footer";
 
 export default function AboutPage() {
   return (
@@ -126,6 +127,7 @@ export default function AboutPage() {
               </form>
             </div>
           </div>
+          <Footer />
         </div>
       </section>
 
@@ -351,6 +353,7 @@ function TestimonialCard({ name, img }) {
         <div className="card-divider"></div>
         <h5 className="client-name">{name}</h5>
       </div>
+      <Footer />
     </div>
   );
 }
