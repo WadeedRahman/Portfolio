@@ -1,6 +1,5 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Linkedin, Twitter, Mail, ArrowUp, Heart, Instagram } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -23,15 +22,14 @@ export default function Footer() {
               Building high-performance web applications with modern tech stacks. 
             </p>
             <div className="social-links d-flex gap-3 mt-4">
-              {/* GitHub removed - Build errors should now be fixed */}
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer" className="social-icon">
-                <Linkedin size={20} />
+              <a href="https://github.com/WadeedRahman" target="_blank" rel="noreferrer" className="social-icon">
+                <i className="bi bi-github" style={{ fontSize: "20px" }}></i>
               </a>
-              <a href="https://twitter.com/yourprofile" target="_blank" rel="noreferrer" className="social-icon">
-                <Twitter size={20} />
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-icon">
+                <i className="bi bi-linkedin" style={{ fontSize: "18px" }}></i>
               </a>
-              <a href="https://instagram.com/yourprofile" target="_blank" rel="noreferrer" className="social-icon">
-                <Instagram size={20} />
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="social-icon">
+                <i className="bi bi-twitter-x" style={{ fontSize: "18px" }}></i>
               </a>
             </div>
           </div>
@@ -57,11 +55,13 @@ export default function Footer() {
           <div className="col-lg-3 col-md-6">
             <h5 className="text-white mb-4 fw-bold">Contact Info</h5>
             <div className="contact-item d-flex align-items-center mb-3">
-              <div className="icon-box-small me-3"><Mail size={16} /></div>
+              <div className="icon-box-small me-3">
+                <i className="bi bi-envelope-fill"></i>
+              </div>
               <span className="text-light-muted">wadeed125@gmail.com</span>
             </div>
             <button onClick={scrollToTop} className="btn-back-to-top mt-3">
-               Back to Top <ArrowUp size={16} className="ms-2" />
+               Back to Top <i className="bi bi-arrow-up ms-2"></i>
             </button>
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function Footer() {
         <div className="footer-bottom border-top border-secondary py-4 text-center">
           <p className="text-light-muted mb-0 small">
             © {new Date().getFullYear()} <span className="text-white fw-bold">Wadeed Rahman</span>. 
-            Built with <Heart size={14} className="text-crimson mx-1" /> using React 19.
+            Built with <i className="bi bi-heart-fill text-crimson mx-1" style={{ fontSize: "12px" }}></i> using React 19.
           </p>
         </div>
       </div>
@@ -77,20 +77,18 @@ export default function Footer() {
       <style>{`
         .footer-section { background-color: #0b132b; position: relative; overflow: hidden; }
         .footer-wave { position: absolute; top: 0; left: 0; width: 100%; overflow: hidden; line-height: 0; }
-        .footer-wave svg { position: relative; display: block; width: calc(100% + 1.3px); height: 50px; }
+        .footer-wave svg { display: block; width: calc(100% + 1.3px); height: 50px; }
         .footer-wave .shape-fill { fill: #ffffff; }
         .text-light-muted { color: #a0aec0; }
         .text-crimson { color: #e63946; }
         .text-gradient { background: linear-gradient(90deg, #e63946, #fca311); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; font-size: 2rem; }
-        .footer-links li { margin-bottom: 12px; }
-        .footer-links a { color: #a0aec0; text-decoration: none; transition: 0.3s; font-size: 0.95rem; }
+        .footer-links a { color: #a0aec0; text-decoration: none; transition: 0.3s; }
         .footer-links a:hover { color: #e63946; padding-left: 5px; }
         .social-icon { width: 40px; height: 40px; background: rgba(255,255,255,0.05); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; text-decoration: none; }
-        .social-icon:hover { background: #e63946; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4); }
+        .social-icon:hover { background: #e63946; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4); color: white; }
         .icon-box-small { width: 32px; height: 32px; background: rgba(230, 57, 70, 0.1); color: #e63946; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
         .btn-back-to-top { background: transparent; border: 1px solid rgba(255,255,255,0.1); color: white; padding: 8px 20px; border-radius: 50px; transition: 0.3s; cursor: pointer; }
         .btn-back-to-top:hover { background: white; color: #0b132b; }
-        .footer-bottom { border-color: rgba(255,255,255,0.05) !important; }
         @media (max-width: 768px) { .footer-section { text-align: center; } .social-links, .contact-item { justify-content: center; } }
       `}</style>
     </footer>
