@@ -75,7 +75,7 @@ const Hero = () => {
 
       <div className="hero-image">
         <div className="image-frame">
-          <img src="my.png" alt="hero" />
+          <img src="you.png" alt="hero" />
         </div>
       </div>
 
