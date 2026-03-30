@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import "./index.css";
 import { Routes, Route } from "react-router-dom";
+import Portfolio from "./components/Portfolio";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/AboutSection" element={<AboutSection />} />
         <Route path="/Services" element={<Services />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/Portfolio" element={<Portfolio />} />
       </Routes>
     </>
   );
