@@ -164,7 +164,7 @@ export default function Portfolio() {
         />
         
       )}
-<Footer />
+
       {/* --- STYLES (Updated for Lightbox functionality) --- */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap');
@@ -266,6 +266,7 @@ export default function Portfolio() {
             .divider-vertical { display: none; }
         }
       `}</style>
+      <Footer />
     </div>
   );
 }
