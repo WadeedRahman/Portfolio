@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Github as GitHub, Linkedin, Twitter, Mail, ArrowUp, Heart } from "lucide-react";
+import { Linkedin, Twitter, Mail, ArrowUp, Heart, Instagram } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -23,9 +23,16 @@ export default function Footer() {
               Building high-performance web applications with modern tech stacks. 
             </p>
             <div className="social-links d-flex gap-3 mt-4">
-              <a href="https://GitHub.com/WadeedRahman" target="_blank" rel="noreferrer" className="social-icon"><GitHub size={20} /></a>
-              <a href="#" className="social-icon"><Linkedin size={20} /></a>
-              <a href="#" className="social-icon"><Twitter size={20} /></a>
+              {/* GitHub removed - Build errors should now be fixed */}
+              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer" className="social-icon">
+                <Linkedin size={20} />
+              </a>
+              <a href="https://twitter.com/yourprofile" target="_blank" rel="noreferrer" className="social-icon">
+                <Twitter size={20} />
+              </a>
+              <a href="https://instagram.com/yourprofile" target="_blank" rel="noreferrer" className="social-icon">
+                <Instagram size={20} />
+              </a>
             </div>
           </div>
 
@@ -81,7 +88,7 @@ export default function Footer() {
         .social-icon { width: 40px; height: 40px; background: rgba(255,255,255,0.05); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; text-decoration: none; }
         .social-icon:hover { background: #e63946; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4); }
         .icon-box-small { width: 32px; height: 32px; background: rgba(230, 57, 70, 0.1); color: #e63946; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-        .btn-back-to-top { background: transparent; border: 1px solid rgba(255,255,255,0.1); color: white; padding: 8px 20px; border-radius: 50px; transition: 0.3s; }
+        .btn-back-to-top { background: transparent; border: 1px solid rgba(255,255,255,0.1); color: white; padding: 8px 20px; border-radius: 50px; transition: 0.3s; cursor: pointer; }
         .btn-back-to-top:hover { background: white; color: #0b132b; }
         .footer-bottom { border-color: rgba(255,255,255,0.05) !important; }
         @media (max-width: 768px) { .footer-section { text-align: center; } .social-links, .contact-item { justify-content: center; } }
