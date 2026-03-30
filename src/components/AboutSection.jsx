@@ -19,7 +19,7 @@ export default function AboutSection() {
           <div className="col-md-5 text-center mb-5 mb-md-0">
             <div className="image-wrapper">
               <img
-                src="wadeed1.png"
+                src="wadeed1.jpg"
                 alt="profile"
                 className="img-fluid profile-img"
               />
