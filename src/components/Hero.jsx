@@ -116,11 +116,12 @@ const Hero = () => {
             </div>
             <h1 className="hero-title">
               Crafting <span className="text-gradient">Digital</span> <br />
-              Architectures.
+              Architectures
             </h1>
             <p className="hero-description">
-              I’m <strong>Wadeed</strong>—a developer turning complex logic into 
-              seamless, high-performance web experiences.
+             I’m <strong>Wadeed</strong>, a Full-Stack Web Developer and DevOps Engineer building scalable,
+              high performance applications from development to deployment, with expertise in WordPress development,
+               Shopify eCommerce solutions and data driven Amazon PPC optimization.
             </p>
 
             <div className="hero-actions">
@@ -132,9 +133,8 @@ const Hero = () => {
 
           <div className="hero-visual">
             <div className="glass-frame">
-              <img src="you.png" alt="Wadeed" className="hero-img" />
-              <div className="floating-card card-1">🚀 React 19</div>
-              <div className="floating-card card-2">⚡ Shopify</div>
+              <img src="me.png" alt="Wadeed" className="hero-img" />
+              
             </div>
           </div>
         </div>
@@ -145,18 +145,20 @@ const Hero = () => {
         <div className="row align-items-center glass-card p-5">
           <div className="col-lg-4 text-center mb-4 mb-lg-0">
              <div className="exp-circle">
-                <h2 className="text-gradient mb-0">2+</h2>
-                <span>Years Exp.</span>
+                <h2 className="text-gradient mb-0">3+</h2>
+                <span>Years Exp</span>
              </div>
           </div>
           <div className="col-lg-8">
             <h6 className="text-crimson fw-bold mb-2">ABOUT ME</h6>
-            <h2 className="mb-3">Passionate about <span className="text-gradient">Problem Solving</span></h2>
-            <p className="text-light-muted">
-              I specialize in building scalable web applications. My approach is simple: 
-              Write clean code, focus on the user experience, and always keep learning. 
-              Whether it's a React frontend or a complex Node backend, I'm ready to build it.
-            </p>
+           <h2 className="mb-3">
+  Building Real World Web Solutions
+</h2>
+<p className="text-light-muted">
+  I build scalable web applications using React and Node.js, and handle deployment with modern DevOps practices. 
+  I also work with WordPress and Shopify for eCommerce, along with Amazon PPC to support business growth. 
+  I focus on writing clean code, solving real problems, and continuously improving with every project.
+</p>
           </div>
         </div>
       </section>
@@ -167,16 +169,16 @@ const Hero = () => {
         <div className="row g-4">
           <div className="col-md-6">
             <div className="edu-card">
-              <span className="edu-date">2021 - 2025</span>
-              <h4>Bachelor of Computer Science</h4>
-              <p className="text-crimson">University Name Here</p>
+              <span className="edu-date">2020 - 2024</span>
+              <h4>Bachelor of Information Technology</h4>
+              <p className="text-crimson">University of Gujrat</p>
             </div>
           </div>
           <div className="col-md-6">
             <div className="edu-card">
               <span className="edu-date">2019 - 2021</span>
               <h4>Intermediate in Computer Science</h4>
-              <p className="text-crimson">College Name Here</p>
+              <p className="text-crimson">Aspire College Jhelum</p>
             </div>
           </div>
         </div>
@@ -266,7 +268,7 @@ const Hero = () => {
         .hero-img { width: 300px; border-radius: 20px; }
         
         .tech-ribbon { background: #e63946; padding: 15px 0; width: 110%; margin-left: -5%; transform: rotate(-1deg); }
-        .ribbon-track { white-space: nowrap; font-weight: 900; animation: scroll 20s linear infinite; }
+        .ribbon-track { white-space: nowrap; font-weight: 900; animation: scroll 60s linear infinite; }
 
         @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
         @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
