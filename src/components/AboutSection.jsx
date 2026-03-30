@@ -89,7 +89,7 @@ export default function AboutSection() {
       <section className="testimonials-section py-5">
         <div className="container text-center">
           <h2 className="section-title">What My Clients Say</h2>
-          <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p className="subtitle">I value building strong relationships with my clients. Here’s what some of them have to say about working together:</p>
           <div className="underline mx-auto"></div>
 
           <div className="row mt-5">
@@ -132,7 +132,8 @@ export default function AboutSection() {
             <div className="col-lg-8">
               <h2 className="section-title mb-4">Stay In Touch</h2>
               <p className="subscribe-text mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                I’m always open to discussing new projects, collaboration opportunities, or just sharing ideas. 
+  Drop me a message and let’s create something amazing together.
               </p>
               
               <form className="subscribe-form d-flex flex-column flex-sm-row justify-content-center gap-3">
