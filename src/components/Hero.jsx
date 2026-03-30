@@ -133,7 +133,7 @@ const Hero = () => {
 
           <div className="hero-visual">
             <div className="glass-frame">
-              <img src="me.png" alt="Wadeed" className="hero-img" />
+              <img src="me.jpg" alt="Wadeed" className="hero-img" />
               
             </div>
           </div>
@@ -268,7 +268,7 @@ const Hero = () => {
         .hero-img { width: 300px; border-radius: 20px; }
         
         .tech-ribbon { background: #e63946; padding: 15px 0; width: 110%; margin-left: -5%; transform: rotate(-1deg); }
-        .ribbon-track { white-space: nowrap; font-weight: 900; animation: scroll 60s linear infinite; }
+        .ribbon-track { white-space: nowrap; font-weight: 900; animation: scroll 25s linear infinite; }
 
         @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
         @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
