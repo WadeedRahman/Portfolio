@@ -96,133 +96,189 @@ const Hero = () => {
     fireConfetti();
   }, []);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Message sent! Wadeed will contact you soon.");
+    setShowForm(false);
+  };
+
   return (
-    <div className="portfolio-main">
+    <div className="hero-wrapper">
       {/* --- HERO SECTION --- */}
       <section className="hero-modern">
-        <div className="container d-flex align-items-center flex-column flex-lg-row">
+        <div className="blob blob-1"></div>
+        <div className="blob blob-2"></div>
+
+        <div className="container hero-content d-flex align-items-center">
           <div className="hero-text-block">
             <div className="badge-modern mb-3">
-              <span className="dot"></span> OPEN FOR COLLABORATION
+              <span className="dot"></span> AVAILABLE FOR PROJECTS
             </div>
             <h1 className="hero-title">
-              Innovating the <span className="text-gradient">Digital</span> <br />
-              Landscape.
+              Crafting <span className="text-gradient">Digital</span> <br />
+              Architectures.
             </h1>
             <p className="hero-description">
-              I’m <strong>Wadeed Ur Rahman</strong>. I bridge the gap between 
-              complex backend logic and pixel-perfect frontend experiences.
+              I’m <strong>Wadeed</strong>—a developer turning complex logic into 
+              seamless, high-performance web experiences.
             </p>
-            <button className="btn-main" onClick={() => setShowForm(true)}>
-              Get In Touch
-            </button>
+
+            <div className="hero-actions">
+              <button className="btn-main" onClick={() => setShowForm(true)}>
+                Start a Conversation
+              </button>
+            </div>
           </div>
+
           <div className="hero-visual">
             <div className="glass-frame">
               <img src="you.png" alt="Wadeed" className="hero-img" />
-              <div className="floating-card card-1">Full-Stack</div>
-              <div className="floating-card card-2">React 19</div>
+              <div className="floating-card card-1">🚀 React 19</div>
+              <div className="floating-card card-2">⚡ Shopify</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* --- ABOUT ME SECTION --- */}
-      <section className="about-section container">
-        <div className="row align-items-center">
-          <div className="col-lg-6 mb-5 mb-lg-0">
-            <div className="about-visual">
-                <div className="experience-box">
-                    <h3>2+</h3>
-                    <p>Years of <br/> Crafting Code</p>
-                </div>
-                <div className="blob-bg"></div>
-            </div>
+      {/* --- ABOUT ME BLOCK --- */}
+      <section className="about-block container my-5">
+        <div className="row align-items-center glass-card p-5">
+          <div className="col-lg-4 text-center mb-4 mb-lg-0">
+             <div className="exp-circle">
+                <h2 className="text-gradient mb-0">2+</h2>
+                <span>Years Exp.</span>
+             </div>
           </div>
-          <div className="col-lg-6">
-            <h6 className="section-subtitle">WHO AM I?</h6>
-            <h2 className="section-title">A Developer with a Passion for <span className="text-gradient">Problem Solving</span></h2>
-            <p className="about-text">
-              My journey started with a curiosity for how things work under the hood. 
-              Today, I specialize in building scalable web applications using the 
-              MERN stack and modern UI frameworks. I don't just write code; 
-              I build solutions that help businesses grow.
+          <div className="col-lg-8">
+            <h6 className="text-crimson fw-bold mb-2">ABOUT ME</h6>
+            <h2 className="mb-3">Passionate about <span className="text-gradient">Problem Solving</span></h2>
+            <p className="text-light-muted">
+              I specialize in building scalable web applications. My approach is simple: 
+              Write clean code, focus on the user experience, and always keep learning. 
+              Whether it's a React frontend or a complex Node backend, I'm ready to build it.
             </p>
-            <div className="skill-tags">
-              <span>Clean Code</span>
-              <span>User Centric</span>
-              <span>Fast Learner</span>
-            </div>
           </div>
         </div>
       </section>
 
       {/* --- EDUCATION SECTION --- */}
-      <section className="education-section py-5">
-        <div className="container">
-          <div className="text-center mb-5">
-            <h6 className="section-subtitle">MY JOURNEY</h6>
-            <h2 className="section-title text-white">Academic <span className="text-gradient">Background</span></h2>
-          </div>
-          <div className="education-grid">
-            {/* Degree 1 */}
+      <section className="education-grid container py-5">
+        <h2 className="text-center mb-5">Academic <span className="text-gradient">Journey</span></h2>
+        <div className="row g-4">
+          <div className="col-md-6">
             <div className="edu-card">
-              <div className="edu-icon"><i className="bi bi-mortarboard-fill"></i></div>
-              <div className="edu-content">
-                <span className="edu-date">2021 — 2025</span>
-                <h4>Bachelor of Computer Science</h4>
-                <p className="edu-org">Your University Name</p>
-                <p className="edu-desc">Focused on Software Engineering, Data Structures, and Web Technologies.</p>
-              </div>
+              <span className="edu-date">2021 - 2025</span>
+              <h4>Bachelor of Computer Science</h4>
+              <p className="text-crimson">University Name Here</p>
             </div>
-            {/* Degree 2 */}
+          </div>
+          <div className="col-md-6">
             <div className="edu-card">
-              <div className="edu-icon"><i className="bi bi-patch-check-fill"></i></div>
-              <div className="edu-content">
-                <span className="edu-date">2019 — 2021</span>
-                <h4>Intermediate in Computer Science</h4>
-                <p className="edu-org">Your College Name</p>
-                <p className="edu-desc">Foundation in Programming Fundamentals and Mathematics.</p>
-              </div>
+              <span className="edu-date">2019 - 2021</span>
+              <h4>Intermediate in Computer Science</h4>
+              <p className="text-crimson">College Name Here</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Styles */}
+      {/* --- REPAIRING THE FORM (STRICT CSS) --- */}
+      {showForm && (
+        <div className="form-overlay" onClick={() => setShowForm(false)}>
+          <div className="form-container-glass" onClick={(e) => e.stopPropagation()}>
+            <button className="close-x" onClick={() => setShowForm(false)}>×</button>
+            <div className="form-header text-center mb-4">
+              <h2 className="text-white">Let's <span className="text-gradient">Work</span></h2>
+              <p className="text-light-muted">Send me a message and I'll respond within 24 hours.</p>
+            </div>
+            <form onSubmit={handleSubmit}>
+              <div className="input-group-modern mb-3">
+                <input type="text" placeholder="Your Name" required />
+              </div>
+              <div className="input-group-modern mb-3">
+                <input type="email" placeholder="Your Email" required />
+              </div>
+              <div className="input-group-modern mb-3">
+                <textarea placeholder="Tell me about your project..." rows="4" required></textarea>
+              </div>
+              <button type="submit" className="btn-main w-100">Send Message</button>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* --- TECH RIBBON --- */}
+      <div className="tech-ribbon mt-5">
+        <div className="ribbon-track">
+          <span>REACT</span> • <span>NODE.JS</span> • <span>SHOPIFY</span> • <span>NEXT.JS</span> • <span>UI/UX</span> • <span>REACT</span> • <span>NODE.JS</span>
+        </div>
+      </div>
+
       <style>{`
-        .portfolio-main { background: #0b132b; color: white; }
-        .section-subtitle { color: #e63946; font-weight: 700; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 10px; display: block; }
-        .section-title { font-size: 2.8rem; font-weight: 800; margin-bottom: 25px; color: white; }
+        .hero-wrapper { background: #0b132b; color: white; overflow: hidden; padding-bottom: 50px; }
         .text-gradient { background: linear-gradient(90deg, #e63946, #fca311); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .text-crimson { color: #e63946; }
+        .text-light-muted { color: #a0aec0; }
 
-        /* About Styles */
-        .about-section { padding: 100px 0; }
-        .about-text { color: #a0aec0; line-height: 1.8; font-size: 1.1rem; }
-        .skill-tags { display: flex; gap: 15px; margin-top: 30px; }
-        .skill-tags span { background: rgba(230, 57, 70, 0.1); color: #e63946; padding: 8px 20px; border-radius: 50px; font-weight: 600; border: 1px solid rgba(230, 57, 70, 0.2); }
-        .about-visual { position: relative; }
-        .experience-box { position: absolute; bottom: 20px; right: 20px; background: white; color: #0b132b; padding: 25px; border-radius: 20px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.3); z-index: 2; }
-        .experience-box h3 { font-size: 2.5rem; font-weight: 900; margin-bottom: 0; color: #e63946; }
-        .blob-bg { width: 350px; height: 350px; background: linear-gradient(45deg, #e63946, #0b132b); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; animation: blob 8s infinite alternate; filter: blur(40px); opacity: 0.4; }
+        /* Form Overlay Fix */
+        .form-overlay {
+          position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+          background: rgba(11, 19, 43, 0.9); backdrop-filter: blur(10px);
+          display: flex; align-items: center; justify-content: center; z-index: 10000;
+        }
+        .form-container-glass {
+          background: #162447; border: 1px solid rgba(255,255,255,0.1);
+          padding: 40px; border-radius: 25px; width: 90%; max-width: 500px;
+          position: relative; animation: slideUp 0.4s ease;
+        }
+        .close-x {
+          position: absolute; top: 15px; right: 20px; background: none; border: none;
+          color: white; font-size: 2rem; cursor: pointer;
+        }
+        .input-group-modern input, .input-group-modern textarea {
+          width: 100%; padding: 12px 20px; background: rgba(255,255,255,0.05);
+          border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: white; outline: none;
+        }
+        .input-group-modern input:focus { border-color: #e63946; }
 
-        /* Education Styles */
-        .education-grid { display: grid; gap: 30px; max-width: 800px; margin: 0 auto; }
-        .edu-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 25px; display: flex; gap: 25px; transition: 0.3s; }
-        .edu-card:hover { background: rgba(255, 255, 255, 0.06); transform: translateX(10px); border-color: #e63946; }
-        .edu-icon { font-size: 2rem; color: #e63946; }
-        .edu-date { color: #fca311; font-weight: 700; font-size: 0.9rem; }
-        .edu-content h4 { margin: 10px 0 5px; font-weight: 700; }
-        .edu-org { font-weight: 600; color: #a0aec0; margin-bottom: 10px; }
-        .edu-desc { color: #718096; font-size: 0.95rem; }
+        /* About & Education */
+        .glass-card { background: rgba(255,255,255,0.03); border-radius: 30px; border: 1px solid rgba(255,255,255,0.05); }
+        .exp-circle {
+          width: 150px; height: 150px; border: 4px solid #e63946; border-radius: 50%;
+          display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto;
+        }
+        .edu-card {
+          background: rgba(255,255,255,0.02); padding: 30px; border-radius: 20px;
+          border-left: 4px solid #e63946; transition: 0.3s;
+        }
+        .edu-card:hover { background: rgba(255,255,255,0.05); transform: translateY(-5px); }
+        .edu-date { color: #fca311; font-weight: bold; font-size: 0.9rem; }
 
-        @keyframes blob { from { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; } to { border-radius: 50% 50% 20% 80% / 20% 50% 50% 80%; } }
+        /* Existing Styles Repaired */
+        .hero-modern { position: relative; padding: 100px 0; min-height: 80vh; display: flex; align-items: center; }
+        .hero-title { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1.1; }
+        .hero-description { color: #a0aec0; max-width: 500px; margin: 20px 0 40px; }
+        .btn-main { background: #e63946; color: white; border: none; padding: 14px 35px; border-radius: 50px; font-weight: 700; transition: 0.3s; cursor: pointer; }
+        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(230, 57, 70, 0.4); }
         
-        /* Mobile adjustment */
-        @media (max-width: 768px) { .edu-card { flex-direction: column; text-align: center; } .section-title { font-size: 2.2rem; } }
-      `}</style>
+        .hero-visual { flex: 1; display: flex; justify-content: center; }
+        .glass-frame { position: relative; background: rgba(255,255,255,0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 30px; padding: 15px; }
+        .hero-img { width: 300px; border-radius: 20px; }
+        
+        .tech-ribbon { background: #e63946; padding: 15px 0; width: 110%; margin-left: -5%; transform: rotate(-1deg); }
+        .ribbon-track { white-space: nowrap; font-weight: 900; animation: scroll 20s linear infinite; }
 
-      {/* Your Contact Form Popup Logic here... */}
+        @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+        .dot { width: 8px; height: 8px; background: #e63946; border-radius: 50%; margin-right: 10px; display: inline-block; animation: pulse 2s infinite; }
+        .badge-modern { display: inline-flex; align-items: center; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 20px; color: #e63946; border: 1px solid rgba(230,57,70,0.3); }
+
+        @media (max-width: 992px) {
+          .hero-content { flex-direction: column; text-align: center; }
+          .hero-visual { margin-top: 50px; }
+        }
+      `}</style>
     </div>
   );
 };
