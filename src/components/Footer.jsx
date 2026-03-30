@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { GitHub, Linkedin, Twitter, Mail, ArrowUp, Heart } from "lucide-react";
+import { Github as GitHub, Linkedin, Twitter, Mail, ArrowUp, Heart } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
