@@ -57,7 +57,7 @@ export default function Portfolio() {
             Focused on building high-performance web applications and seamless Shopify experiences with a touch of modern aesthetics.
           </p>
           <div className="d-flex justify-content-center gap-3">
-            <a href="/Wadeed_CV.pdf" download className="btn-modern-primary">
+            <a href="Wadeed Cv.pdf" download className="btn-modern-primary">
               Download CV <Download size={18} className="ms-2" />
             </a>
           </div>
