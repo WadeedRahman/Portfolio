@@ -4,9 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default function Services() {
    const [showForm, setShowForm] = useState(false);
   
-    useEffect(() => {
-      fireConfetti();
-    }, []);
+   
   
     const handleSubmit = (e) => {
       e.preventDefault();
