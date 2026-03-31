@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Services() {
+   const [showForm, setShowForm] = useState(false);
+  
+    useEffect(() => {
+      fireConfetti();
+    }, []);
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      alert("Message sent! Wadeed will contact you soon.");
+      setShowForm(false);
+    };
+
   const services = [
     {
       title: "Web Development",
@@ -63,7 +75,7 @@ export default function Services() {
                 <h4 className="service-title">{service.title}</h4>
                 <div className="card-accent"></div>
                 <p className="service-description">{service.description}</p>
-                <button className="read-more">Learn More →</button>
+                
               </div>
             </div>
           ))}
@@ -76,13 +88,59 @@ export default function Services() {
           <div className="cta-box">
             <h2>Have a Project in Mind?</h2>
             <p>Let's build something amazing together. Reach out for a free consultation.</p>
-            <button className="btn btn-danger cta-btn">Get Started Now</button>
+            <button className="btn-main" onClick={() => setShowForm(true)}>Get Started Now</button>
           </div>
           
         </div>
       </section>
+ {showForm && (
+        <div className="form-overlay" onClick={() => setShowForm(false)}>
+          <div className="form-container-glass" onClick={(e) => e.stopPropagation()}>
+            <button className="close-x" onClick={() => setShowForm(false)}>×</button>
+            <div className="form-header text-center mb-4">
+              <h2 className="text-white">Let's <span className="text-gradient">Work</span></h2>
+              <p className="text-light-muted">Send me a message and I'll respond within 24 hours.</p>
+            </div>
+            <form onSubmit={handleSubmit}>
+              <div className="input-group-modern mb-3">
+                <input type="text" placeholder="Your Name" required />
+              </div>
+              <div className="input-group-modern mb-3">
+                <input type="email" placeholder="Your Email" required />
+              </div>
+              <div className="input-group-modern mb-3">
+                <textarea placeholder="Tell me about your project..." rows="4" required></textarea>
+              </div>
+              <button type="submit" className="btn-main w-100">Send Message</button>
+            </form>
+          </div>
+        </div>
+      )}
+
 
       <style>{`
+.form-overlay {
+          position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+          background: rgba(11, 19, 43, 0.9); backdrop-filter: blur(10px);
+          display: flex; align-items: center; justify-content: center; z-index: 10000;
+        }
+        .form-container-glass {
+          background: #162447; border: 1px solid rgba(255,255,255,0.1);
+          padding: 40px; border-radius: 25px; width: 90%; max-width: 500px;
+          position: relative; animation: slideUp 0.4s ease;
+        }
+        .close-x {
+          position: absolute; top: 15px; right: 20px; background: none; border: none;
+          color: white; font-size: 2rem; cursor: pointer;
+        }
+        .input-group-modern input, .input-group-modern textarea {
+          width: 100%; padding: 12px 20px; background: rgba(255,255,255,0.05);
+          border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: white; outline: none;
+        }
+        .input-group-modern input:focus { border-color: #e63946; }
+
+
+
         .services-page {
           background-color: #fdfdfd;
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
