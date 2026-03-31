@@ -50,7 +50,7 @@ export default function Contact() {
                 <div className="icon-circle"><Phone size={24} /></div>
                 <div>
                   <h5>Call Me</h5>
-                  <p>+92 3XX XXXXXXX</p>
+                  <p>+92 340 3111490</p>
                 </div>
               </div>
 
