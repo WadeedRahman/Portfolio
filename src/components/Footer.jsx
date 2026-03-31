@@ -32,13 +32,13 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="col-lg-2 col-md-6">
+          <div className="col-lg-3 col-md-6">
             <h5 className="text-white mb-4 fw-bold">Explore</h5>
             <ul className="list-unstyled footer-links">
-             <Link to="/">Home</Link>
-               <Link to="/Services">Services</Link>
-        <Link to="/portfolio">Portfolio</Link> 
-        <Link to="/contact">Contact</Link>
+               <li><Link to="/">Home</Link></li>  
+               <li><Link to="/Services">Services</Link></li>
+               <li> <Link to="/portfolio">Portfolio</Link> </li>
+               <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
 
