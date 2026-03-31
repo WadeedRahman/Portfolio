@@ -270,29 +270,10 @@ export default function Services() {
           background-color: #c42f3a;
           transform: scale(1.05);
         }
-
-        .btn-main {
-  background: linear-gradient(135deg, #e63946, #ff6b6b);
-  border: none;
-  padding: 14px 40px;
-  color: #fff;
-  font-weight: 600;
-  border-radius: 50px;
-  font-size: 0.95rem;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(230, 57, 70, 0.3);
-}
-
-.btn-main:hover {
-  transform: translateY(-3px) scale(1.05);
-  background: linear-gradient(135deg, #c42f3a, #ff4d4d);
-  box-shadow: 0 12px 25px rgba(230, 57, 70, 0.5);
-}
-
-.btn-main:active {
-  transform: scale(0.98);
-}
+.btn-main { background: #e63946; color: white; border: none; padding: 14px 35px; border-radius: 50px; font-weight: 700; transition: 0.3s; cursor: pointer; }
+        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(230, 57, 70, 0.4); }
+        
+       
 
         @media (max-width: 768px) {
           .services-header h1 {
