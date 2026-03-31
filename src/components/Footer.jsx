@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { Link } from "react-router-dom";
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="container mt-5">
         <div className="row g-4 py-5">
           <div className="col-lg-4 col-md-6">
-            <h3 className="footer-logo text-gradient mb-3">Wadeed.</h3>
+            <h3 className="footer-logo text-gradient mb-3">Wadeed Ur Rahman</h3>
             <p className="text-light-muted pe-lg-5">
               Building high-performance web applications with modern tech stacks. 
             </p>
@@ -25,32 +25,24 @@ export default function Footer() {
               <a href="https://github.com/WadeedRahman" target="_blank" rel="noreferrer" className="social-icon">
                 <i className="bi bi-github" style={{ fontSize: "20px" }}></i>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-icon">
+              <a href="https://www.linkedin.com/in/wadeed-ur-rahman-03a62b269?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" className="social-icon">
                 <i className="bi bi-linkedin" style={{ fontSize: "18px" }}></i>
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="social-icon">
-                <i className="bi bi-twitter-x" style={{ fontSize: "18px" }}></i>
-              </a>
+             
             </div>
           </div>
 
           <div className="col-lg-2 col-md-6">
             <h5 className="text-white mb-4 fw-bold">Explore</h5>
             <ul className="list-unstyled footer-links">
-              <li><a href="/">Home</a></li>
-              <li><a href="/portfolio">Portfolio</a></li>
-              <li><a href="/contact">Contact</a></li>
+             <Link to="/">Home</Link>
+               <Link to="/Services">Services</Link>
+        <Link to="/portfolio">Portfolio</Link> 
+        <Link to="/contact">Contact</Link>
             </ul>
           </div>
 
-          <div className="col-lg-3 col-md-6">
-            <h5 className="text-white mb-4 fw-bold">Specialties</h5>
-            <ul className="list-unstyled footer-links">
-              <li><a href="#">React Development</a></li>
-              <li><a href="#">Shopify Solutions</a></li>
-              <li><a href="#">Cloud Hosting</a></li>
-            </ul>
-          </div>
+         
 
           <div className="col-lg-3 col-md-6">
             <h5 className="text-white mb-4 fw-bold">Contact Info</h5>
@@ -58,7 +50,13 @@ export default function Footer() {
               <div className="icon-box-small me-3">
                 <i className="bi bi-envelope-fill"></i>
               </div>
-              <span className="text-light-muted">wadeed125@gmail.com</span>
+            <a 
+               href="mailto:wadeed125@gmail.com" 
+               className="text-light-muted"
+               style={{ textDecoration: "none" }}
+             >
+               wadeed125@gmail.com
+             </a>
             </div>
             <button onClick={scrollToTop} className="btn-back-to-top mt-3">
                Back to Top <i className="bi bi-arrow-up ms-2"></i>
@@ -68,8 +66,8 @@ export default function Footer() {
 
         <div className="footer-bottom border-top border-secondary py-4 text-center">
           <p className="text-light-muted mb-0 small">
-            © {new Date().getFullYear()} <span className="text-white fw-bold">Wadeed Rahman</span>. 
-            Built with <i className="bi bi-heart-fill text-crimson mx-1" style={{ fontSize: "12px" }}></i> using React 19.
+            © {new Date().getFullYear()} <span className="text-white fw-bold">All Rights Reserved, By Wadeed Ur Rahman</span>. 
+           
           </p>
         </div>
       </div>
@@ -90,7 +88,13 @@ export default function Footer() {
         .btn-back-to-top { background: transparent; border: 1px solid rgba(255,255,255,0.1); color: white; padding: 8px 20px; border-radius: 50px; transition: 0.3s; cursor: pointer; }
         .btn-back-to-top:hover { background: white; color: #0b132b; }
         @media (max-width: 768px) { .footer-section { text-align: center; } .social-links, .contact-item { justify-content: center; } }
-      `}</style>
+     
+     .text-light-muted:hover {
+  color: #e63946;
+  text-decoration: underline;
+}
+     
+     `}</style>
     </footer>
   );
 }
