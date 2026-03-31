@@ -30,11 +30,35 @@ export default function Portfolio() {
     },
     { 
         id: 2, 
-        name: "Meta Front-End Professional", 
-        issuer: "Meta/Coursera", 
-        date: "2023", 
-        pdf: "/certs/meta.pdf",
-        img: "/certs/meta-cert-image.jpg"
+        name: "Linux Commands & Shell Scripting Essentials V2", 
+        issuer: "Coursera", 
+        date: "2024", 
+        pdf: "Linux Commands.pdf",
+        img: "linux-commands-shell-scripting-essentials-v2.png"
+    },
+     { 
+        id: 3, 
+        name: "Introduction to Containers w/ Docker, Kubernetes & OpenShift", 
+        issuer: "Coursera", 
+        date: "2024", 
+        pdf: "Docker.pdf",
+        img: "Screenshot (307).png"
+    },
+     { 
+        id: 4, 
+        name: "Devops Essentials", 
+        issuer: "Coursera", 
+        date: "2024", 
+        pdf: "Devops essentials.pdf",
+        img: "devops-essentials.2.png"
+    },
+     { 
+        id: 5, 
+        name: "Container & Kubernetes Essentials V2", 
+        issuer: "Coursera", 
+        date: "2024", 
+        pdf: "Container & Kubernetes.pdf",
+        img: "container-kubernetes-essentials-v2.png"
     },
   ];
 
