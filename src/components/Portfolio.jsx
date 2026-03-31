@@ -21,12 +21,12 @@ export default function Portfolio() {
   const certifications = [
     { 
         id: 1, 
-        name: "AWS Developer Associate", 
-        issuer: "Amazon Web Services", 
+        name: "Git and GitHub Essentials", 
+        issuer: "Coursera", 
         date: "2024", 
-        pdf: "/certs/aws.pdf", 
+        pdf: "Git and GitHub.pdf", 
         // --- ADD THE IMAGE PATH HERE ---
-        img: "/certs/aws-cert-image.jpg" // Example: Place an image in your public/certs folder
+        img: "git-and-github-essentials.1.png" // Example: Place an image in your public/certs folder
     },
     { 
         id: 2, 
